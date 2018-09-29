@@ -1,0 +1,219 @@
+body {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    
+    background-color: #fafafa;
+
+    display: flex;
+    min-height: 200px;
+    
+    font-family: "Sans-serif", Verdana, serif;
+}
+
+article {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+    top: 0;
+    display: flex;
+    
+    background-color: #fafafa;
+}
+
+a {
+  text-decoration: none ;
+  color: #404040;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+	vertical-align: middle;
+}
+
+ul li{
+    list-style-type: circle;
+    padding: 5px;
+    margin: 5px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+iframe {
+    text-align: center;
+    width: 595px;
+    height: 400px;
+
+    margin: 0;
+    overflow: hidden;
+
+    border:1px solid #CCC; 
+}
+
+.social {
+	width: 24px;
+	height: 24px;
+	padding: 5px;	
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.photo {
+    width: 100px; 
+    padding-right: 20px;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);    
+}
+
+.old {
+    color: gray;
+}
+
+.linkPoster {
+    border: 2px solid #5D6D7E;
+    border-radius: 5px;
+    display: inline-block;
+    color: #5D6D7E;
+    font-size: 75%;
+    padding: 2px;
+}
+.linkPoster:hover {
+    text-decoration: none;
+}
+
+.linkCode {
+    border: 2px solid #148F77;
+    border-radius: 5px;
+    display: inline-block;
+    color: #148F77;
+    font-size: 75%;
+    padding: 2px;
+}
+
+.linkCode:hover {
+    text-decoration: none;
+}
+
+.linkPdf {
+    border: 2px solid #3498DB;
+    border-radius: 5px;
+    display: inline-block;
+    color: #3498DB;
+    font-size: 75%;
+    padding: 2px;
+}
+
+.linkPdf:hover {
+    text-decoration: none;
+}
+
+.linkSlides {
+    border: 2px solid #EC7063;
+    border-radius: 5px;
+    display: inline-block;
+    color: #EC7063;
+    font-size: 75%;
+    padding: 2px;
+}
+
+.linkSlides:hover {
+    text-decoration: none;
+}
+
+.panelLabel {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    font-family: "Monospace", Lucida Console, monospace;
+    font-weight: bold;
+    font-size: 25pt;
+    color: gray;
+
+
+
+    position: relative;
+    top: 88vh;
+    left: 5px;
+    display: block;
+
+
+    transform: rotate(-90deg);
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+
+}
+
+.panelLabel:hover {
+    text-decoration: none;
+}
+
+
+.panel {
+    margin: 0;
+    border: 0;
+    padding: 10px;
+
+    width: 50px;
+    min-width: 50px;
+    min-height: 200px;        
+
+    position: relative;
+    float: right;
+    overflow: hidden;
+
+    background-color: #cfcfcf;
+    background-image: linear-gradient(#cfcfcf, #fafafa);
+    cursor: pointer;
+
+}
+
+.content {
+    margin: 0 auto;
+    border: 0;
+    padding: 0;
+
+    height: 100vh;
+
+    float: left;
+    position: relative; 
+    
+    justify-content: center;      
+}
+
+.contentInside {
+    width: 720px;
+    max-width: 720px;
+    /*min-width: 300px;*/
+
+    display: block;
+    margin: 0 auto;
+    
+    padding: 15px;
+    text-align: justify;
+}
+
+
+.hidden {
+    color: #fafafa;
+    visibility: hidden;
+}
