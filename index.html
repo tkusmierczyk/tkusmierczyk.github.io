@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
-<title>Tomasz Kuśmierczyk Homepage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <base href="https://students.mimuw.edu.pl/~tk290810/">
 <script>
 const IDS = ["about", "publications", "presentations"]
@@ -13,59 +13,55 @@ const IDS = ["about", "publications", "presentations"]
 function choose(id) {
     var i;
 
-    if (document.getElementById(id).style.display == 'block' && document.getElementById("expand").style.display != 'none') {
-        for (i = 0; i < IDS.length; i++) { 
-            if (IDS[i]==id) break;    
-        }       
-        if (i < IDS.length-1) id=IDS[i+1];         
-    }
-
-    for (i = 0; i < IDS.length; i++) { 
+    for (i = 0; i < IDS.length; i++) { //hide all
         document.getElementById(IDS[i]).style.display = 'none';
-    }       
+    } 
+
+      
     document.getElementById(id).style.display = 'block';   
-    document.getElementById("expand").style.display = 'block';
 }
 
-function expand() {
-    for (i = 0; i < IDS.length; i++) { 
-        document.getElementById(IDS[i]).style.display = 'block';
-    }            
-    document.getElementById("expand").style.display = 'none';
-}
+
+
+// sticky navbar
+window.onscroll = function() {navbarFunction()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function navbarFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+} 
+
 </script>
 
+<title>Tomasz Kuśmierczyk Homepage</title>
 </head>
 
 <body>
 
-<!-- Experimental button //-->
-<aside style="position: fixed; top: 35px; left: 40px; transform: translate(-50%,-50%); z-index: 10;" onclick="expand()" id="expand">
-    <img src="expand.png" alt="" style="width: 30px; padding-right: 20px;" />
-</aside>
+<div class="panel1"><div class="panel" id="navbar">
+<a class="panelLabel" onclick='choose("about");'>About</a>
+<a class="panelLabel" onclick='choose("publications");'>Papers</a>
+<a class="panelLabel" onclick='choose("presentations");'>Slides</a>
+</div></div>
 
 
-<article>
-<div class="content" id="about">
-<div class="contentInside">
+<article id="about">
 
-    <div>
-    <div style="float: left;">
-    <img src="me2.png" alt="" class="photo"/>
-    </div>
+    <div style="text-align: justify; display: inline-block;">
     <h1>Tomasz Kuśmierczyk: About me</h1> 
-    <p style="text-align: justify;">
+    <img src="me2.png" alt="" class="photo"/>
     Hi! My name is Tomasz. I am a computer science researcher. 
     My interests are related to machine learning, statistics and data analytics. 
     I work at the <a href="https://www.helsinki.fi/en">University of Helsinki</a>
     in <a href="https://www.helsinki.fi/en/researchgroups/multi-source-probabilistic-inference">Multi-source probabilistic inference group</a>,
     where my goal is to improve methods for machine learning inference.
-    </p>
     </div>
 
-
-    <div style="float: left; text-align: center; padding: 30px;">
-    <a id="contact"> </a>
+    <div style="float: left; min-width: 50%; text-align: center; ">
     <h1>Contact</h1>
     <p>
         Pietari Kalmin katu 5 / room A343 <br />
@@ -74,39 +70,31 @@ function expand() {
     e-mail: tomasz.kusmierczyk [@] helsinki.fi <br />
     e-mail: tomasz.kusmierczyk [@] gmail.com <br />
     </p>
-    <br />
-    <a href="Tomasz_Kusmierczyk_CV.pdf"><h1>My Curriculum Vitae</h1></a>
+        <h1><a href="Tomasz_Kusmierczyk_CV.pdf">My Curriculum Vitae</a></h1>
     </div>
 
-
-    <div style="float: right; text-align: justify;  padding: 30px;">
+    <div style="text-align: justify; ">
     <h1>Media</h1>
-    <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/GitHub-Mark.png" class="social" alt="" />GitHub</a>  <br />
-    <a href="http://www.linkedin.com/in/tomaszkusmierczyk/"><img src="icons/linkedin-logo.png" class="social" alt=""/>LinkedIn</a> <br />
-    <a href="https://scholar.google.no/citations?hl=pl&user=kpDCshMAAAAJ&view_op=list_works&sortby=pubdate"><img src="icons/googlescholar_icon.png" class="social" alt="" />Scholar</a>  <br />
-    <a href="http://dblp.uni-trier.de/pers/hd/k/Kusmierczyk:Tomasz"><img src="icons/dblp.icon.192x192.png" class="social" alt="" />DBLP</a>    <br />
-    <a href="https://www.researchgate.net/profile/Tomasz_Kusmierczyk"><img src="icons/49500.png" class="social" alt=""/>ResearchGate</a>   <br />
-    <a href="https://twitter.com/t_kusmierczyk"><img src="icons/twitter.png" class="social" alt=""/>News (Twitter)</a>   <br />
-    <a href="blog"><img src="icons/blog.png" class="social" alt=""/>Blog (Misc)</a>   <br />
+
+        <div style="display: table-cell; min-width: 50%; ">
+        <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/GitHub-Mark.png" class="social" alt="" />GitHub</a>  <br />
+        <a href="http://www.linkedin.com/in/tomaszkusmierczyk/"><img src="icons/linkedin-logo.png" class="social" alt=""/>LinkedIn</a> <br />
+        <a href="https://scholar.google.no/citations?hl=pl&user=kpDCshMAAAAJ&view_op=list_works&sortby=pubdate"><img src="icons/googlescholar_icon.png" class="social" alt="" />Scholar</a>  <br />
+        <a href="http://dblp.uni-trier.de/pers/hd/k/Kusmierczyk:Tomasz"><img src="icons/dblp.icon.192x192.png" class="social" alt="" />DBLP</a>    <br />
+         </div>
+
+        <div style="display: table-cell; ">
+        <a href="https://www.researchgate.net/profile/Tomasz_Kusmierczyk"><img src="icons/49500.png" class="social" alt=""/>ResearchGate</a>   <br />
+        <a href="https://twitter.com/t_kusmierczyk"><img src="icons/twitter.png" class="social" alt=""/>News (Twitter)</a>   <br />
+        <a href="blog"><img src="icons/blog.png" class="social" alt=""/>Blog (Misc)</a>   <br />
+        </div>
+
     </div>
 
-
-
-</div>
-<p class="hidden"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
-</div>
-<div class="panel" onclick='choose("about");'><a class="panelLabel">About</a></div>
 </article>
 
 
-
-
-
-<article>
-<div class="content"  id="publications" style="display:none"> 
-<div class="contentInside">
-
-
+<article  id="publications" style="display:none" >
 
 <h1>Publications</h1>
 <ul>
@@ -208,18 +196,10 @@ UMAP 2016. (CORE rank: B)
 
 </ul>
 
-</div>
-<p class="hidden"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
-</div>
-<div class="panel" onclick='choose("publications");'><a class="panelLabel">Publications</a></div>
 </article>
 
 
-
-
-<article>
-<div class="content" id="presentations" style="display:none">
-<div class="contentInside" style="text-align: center;">
+<article id="presentations" style="display:none; text-align: center;" >
 
 <h1>Presentations</h1>
 <!--<ul style="text-align:center;">//-->
@@ -257,14 +237,8 @@ UMAP 2016. (CORE rank: B)
 <h3><a href="https://www.slideshare.net/TomaszKusmierczyk/tomasz-kusmierczyk-dasfaa2015burstystreams" title="Mining Correlations on Massive Bursty Time Series Collection (DASFAA2015)" target="_blank">Mining Correlations on Massive Bursty Time Series Collection</a> (DASFAA2015) </h3>
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/4RCSSaH7mtArPO"  allowfullscreen> </iframe> 
 
-
 <!--</ul> //-->
 
-
-</div>
-<p class="hidden"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
-</div>
-<div class="panel" onclick='choose("presentations");'><a class="panelLabel">Presentations</a></div>
 </article>
 
 
