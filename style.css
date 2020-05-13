@@ -12,32 +12,37 @@ article {
     margin: auto;
     padding: 10px;
     max-width: 720px;
-    margin-bottom: 60px; /* Add a bottom margin to avoid content overlay */
+
+    padding-top: 60px;
 }
 
 
 
 .panel1 {    
-    max-width: 720px;
-    margin: auto;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #dcdcdc;
 }
 
 
-.panel {    
-    position: fixed;
-    bottom: 0; /* Position the navbar at the bottom of the page */
-    width: 100%;
+.panel {        
+    margin: auto;
+
+    top: 0; /* Position the navbar at the bottom of the page */
+    width: 720px;
     max-width: 720px;
 
-    background-color: #dcdcdc;
+    /*background-color: #dcdcdc;*/
     cursor: pointer;
     z-index: 100;
 }
 
 .panelLabel {
-    float: left;
-    display: block;
-    padding: 10px;
+    display: inline-block;
+    padding: 5px 20px 5px 20px;
 
     font-family: "Monospace", Lucida Console, monospace;
     font-weight: bold;
