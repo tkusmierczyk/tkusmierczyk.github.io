@@ -11,7 +11,7 @@ body {
 article {
     margin: auto;
     padding: 10px;
-    max-width: 720px;
+    max-width: 960px;
 
     padding-top: 60px;
 }
@@ -32,8 +32,8 @@ article {
     margin: auto;
 
     top: 0; /* Position the navbar at the bottom of the page */
-    width: 720px;
-    max-width: 720px;
+    width: 960px;
+    max-width: 960px;
 
     /*background-color: #dcdcdc;*/
     cursor: pointer;
@@ -94,11 +94,10 @@ h3 {
 
 
 
-iframe {
+.slides {
     text-align: center;
-    width: 90%; 
-    height: 300px;
-    height: max(550px, 75vh);
+    width: 600px; 
+    height: 489px;
 
     margin: 0;
     overflow: hidden;
