@@ -94,18 +94,24 @@ h3 {
     font-size: large;
 }
 
-
+.slides-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 81.5%; /* This is the aspect ratio (height / width). Adjust as needed. */
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+}
 
 .slides {
-    text-align: center;
-    width: 600px; 
-    height: 489px;
-
-    margin: 0;
-    overflow: hidden;
-
-    border:1px solid #CCC; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #CCC;
     border-radius: 15px;
+    z-index: -1;
 }
 
 .social {
