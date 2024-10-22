@@ -24,6 +24,8 @@ function choose(id) {
   setTimeout(function() {
       document.getElementById(id).style.display = 'block';  // Set display block before fade-in
       document.getElementById(id).style.opacity = '1';  // Set opacity to 1 for fade-in
+
+      window.scrollTo(0, 0);  // Ensures the page scrolls to the top      
   }, 500);  // Adjust the delay to match the fade duration
 }
 
