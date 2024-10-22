@@ -14,6 +14,8 @@ article {
     max-width: 960px;
 
     padding-top: 60px;
+    transition: opacity 0.5s ease;  /* Transition for smooth fade */
+    /* opacity: 0;  Initially hidden */
 }
 
 
@@ -110,8 +112,21 @@ h3 {
 	width: 24px;
 	height: 24px;
 	padding: 5px;	
+}
+
+
+.shaded_links a {
+    opacity: 75%;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
+}
+
+
+.shaded_links a:hover {
+    opacity: 100%;
+    text-decoration: none;
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
 }
 
 .photo {

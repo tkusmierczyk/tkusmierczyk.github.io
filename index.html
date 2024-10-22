@@ -11,12 +11,21 @@
 
 const IDS = ["about", "publications", "presentations"]
 
+
+
 function choose(id) {
-    for (var i = 0; i < IDS.length; i++) { //hide all
-        document.getElementById(IDS[i]).style.display = 'none';
-    }       
-    document.getElementById(id).style.display = 'block';   
-};
+  for (var i = 0; i < IDS.length; i++) {
+      document.getElementById(IDS[i]).style.opacity = '0';  // Set opacity to 0 for fade-out
+      setTimeout(function(i) {
+          document.getElementById(IDS[i]).style.display = 'none';  // Set display to none after fade-out
+      }, 500, i);  // Adjust the delay to match the fade duration
+  }
+
+  setTimeout(function() {
+      document.getElementById(id).style.display = 'block';  // Set display block before fade-in
+      document.getElementById(id).style.opacity = '1';  // Set opacity to 1 for fade-in
+  }, 500);  // Adjust the delay to match the fade duration
+}
 
 
 
@@ -69,30 +78,34 @@ function onLoad() {
     </div>
     </div>
 
-    <div style="float: left; min-width: 50%; text-align: center; ">
+    <div style="float: left; text-align: center; padding-top: 40px;">
     <h1>Contact</h1>
     <p>
     e-mail: tomasz [dot] kusmierczyk [at] gmail.com <br />
     </p>
-        <h1><a href="Tomasz_Kusmierczyk_CV.pdf">My Curriculum Vitae</a></h1>
+        <h1 class="shaded_links"><a href="Tomasz_Kusmierczyk_CV.pdf" target="_blank">My Curriculum Vitae</a></h1>
     </div>
 
-    <div style="text-align: justify;">
+    <div style="padding-top: 40px;">
+        <div style="text-align: center;">
         <h1>Media</h1>
-
-        <div style="display: table-cell; min-width: 50%; ">
-        <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/GitHub-Mark.png" class="social" alt="" />GitHub</a>  <br />
-        <a href="http://www.linkedin.com/in/tomaszkusmierczyk/"><img src="icons/linkedin-logo.png" class="social" alt=""/>LinkedIn</a> <br />
-        <a href="https://scholar.google.no/citations?hl=pl&user=kpDCshMAAAAJ&view_op=list_works&sortby=pubdate"><img src="icons/googlescholar_icon.png" class="social" alt="" />Scholar</a>  <br />
-        <a href="http://dblp.uni-trier.de/pers/hd/k/Kusmierczyk:Tomasz"><img src="icons/dblp.icon.192x192.png" class="social" alt="" />DBLP</a>    <br />
-         </div>
-
-        <div style="display: table-cell; ">
-        <a href="https://www.researchgate.net/profile/Tomasz_Kusmierczyk"><img src="icons/49500.png" class="social" alt=""/>ResearchGate</a>   <br />
-        <a href="https://twitter.com/t_kusmierczyk"><img src="icons/twitter.png" class="social" alt=""/>News (Twitter)</a>   <br />
-        <a href="blog/?alllabels=1&labels=ML"><img src="icons/blog.png" class="social" alt=""/>Blog (Misc)</a>   <br />
         </div>
 
+        <div style="display: flex; justify-content: center; gap: 25px;">
+        <div style="text-align: left; "  class="shaded_links">
+          <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/GitHub-Mark.png" class="social" alt="" />GitHub</a>  <br />
+          <a href="http://www.linkedin.com/in/tomaszkusmierczyk/"><img src="icons/linkedin-logo.png" class="social" alt=""/>LinkedIn</a> <br />
+          <a href="https://scholar.google.no/citations?hl=pl&user=kpDCshMAAAAJ&view_op=list_works&sortby=pubdate"><img src="icons/googlescholar_icon.png" class="social" alt="" />Scholar</a>  <br />
+          <a href="http://dblp.uni-trier.de/pers/hd/k/Kusmierczyk:Tomasz"><img src="icons/dblp.icon.192x192.png" class="social" alt="" />DBLP</a>    <br />
+         </div>
+
+        <div style="text-align: left;" class="shaded_links">
+          <a href="https://bayes.ii.uj.edu.pl"><img src="icons/blog.png" class="social" alt=""/>Current Project</a>   <br />
+          <a href="https://www.researchgate.net/profile/Tomasz_Kusmierczyk"><img src="icons/49500.png" class="social" alt=""/>ResearchGate</a>   <br />
+          <a href="https://twitter.com/t_kusmierczyk"><img src="icons/twitter.png" class="social" alt=""/>News (Twitter)</a>   <br />
+          <!-- <a href="blog/?alllabels=1&labels=ML"><img src="icons/blog.png" class="social" alt=""/>Blog (Misc)</a>   <br /> -->
+        </div>
+        </div>
     </div>
 
 </article>
@@ -103,16 +116,19 @@ function onLoad() {
 <h1>Publications</h1>
 <ul>
 
+<li>E. de Souza da Silva, <u>T. Kuśmierczyk</u>, M. Hartmann, A. Klami: <i>Prior Specification for Bayesian Matrix Factorization via Prior Predictive Matching</i>. 
+  <a href="https://jmlr.org/papers/v24/" target="_blank">JMLR 2023.</a>
+  <a href="https://jmlr.org/papers/volume24/21-0623/21-0623.pdf" class="linkCode">ONLINE</a>
+  <a href="https://arxiv.org/pdf/1910.12263.pdf" class="linkPdf">arXiv</a>
+  <a href="https://github.com/tkusmierczyk/bayesian_hyperparameters_matching" class="linkCode">CODE</a> 
+</li>
+
 <li><u>T. Kuśmierczyk</u>, A. Klami: <i>Reliable Categorical Variational Inferencewith Mixture of Discrete Normalizing Flows</i>. 
 <a href="https://arxiv.org/pdf/2006.15568.pdf" class="linkPdf">arXiv</a>
 <a href="https://github.com/tkusmierczyk/mixture_of_discrete_normalizing_flows" class="linkCode">CODE</a> 
 <a href="https://www.slideshare.net/TomaszKusmierczyk/automatic-variational-inference-with-latent-categorical-variables" class="linkSlides">SLIDES</a>
 </li>
 
-<li>E. de Souza da Silva, <u>T. Kuśmierczyk</u> (equal contribution), M. Hartmann, A. Klami: <i>Prior specification via prior predictive matching: Poisson matrix factorization and beyond</i>. 
-<a href="https://arxiv.org/pdf/1910.12263.pdf" class="linkPdf">arXiv</a>
-<a href="https://github.com/tkusmierczyk/bayesian_hyperparameters_matching" class="linkCode">CODE</a> 
-</li>
 
 <li>O. Nyberg, <u>T. Kuśmierczyk</u>, A. Klami: <i>Uplift Modeling with High Class Imbalance</i>.
   <a href="http://www.acml-conf.org/2021/" target="_blank"> ACML 2021.</a>  
