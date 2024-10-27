@@ -7,12 +7,13 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <base href="https://students.mimuw.edu.pl/~tk290810/">
+
 <script>
 
+// IDs of the pages
 const IDS = ["about", "publications", "presentations"]
 
-
-
+// Function to choose a page
 function choose(id) {
   for (var i = 0; i < IDS.length; i++) {
       document.getElementById(IDS[i]).style.opacity = '0';  // Set opacity to 0 for fade-out
@@ -30,11 +31,11 @@ function choose(id) {
 }
 
 
-
 // sticky navbar
 window.onscroll = function() {navbarFunction()};
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
+
 function navbarFunction() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
@@ -46,6 +47,7 @@ function navbarFunction() {
 
 function onResize() {
 };
+
 
 function onLoad() {
 };
@@ -96,7 +98,7 @@ function onLoad() {
 
         <div style="display: flex; justify-content: center; gap: 25px;">
         <div style="text-align: left; "  class="shaded_links">
-          <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/GitHub-Mark.png" class="social" alt="" />GitHub</a>  <br />
+          <a href="https://github.com/tkusmierczyk?tab=repositories"><img src="icons/github.png" class="social" alt="" />GitHub</a>  <br />
           <a href="http://www.linkedin.com/in/tomaszkusmierczyk/"><img src="icons/linkedin-logo.png" class="social" alt=""/>LinkedIn</a> <br />
           <a href="https://scholar.google.no/citations?hl=pl&user=kpDCshMAAAAJ&view_op=list_works&sortby=pubdate"><img src="icons/googlescholar_icon.png" class="social" alt="" />Scholar</a>  <br />
           <a href="http://dblp.uni-trier.de/pers/hd/k/Kusmierczyk:Tomasz"><img src="icons/dblp.icon.192x192.png" class="social" alt="" />DBLP</a>    <br />
