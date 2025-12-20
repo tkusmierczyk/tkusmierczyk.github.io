@@ -8,10 +8,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <base href="https://students.mimuw.edu.pl/~tk290810/">
 
+
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+
 <script>
 
 // IDs of the pages
-const IDS = ["about", "publications", "presentations"]
+const IDS = ["about", "publications", "code", "presentations"]
 
 // Function to choose a page
 function choose(id) {
@@ -62,6 +66,7 @@ function onLoad() {
 <div class="panel1"><div class="panel" id="navbar">
 <a class="panelLabel" onclick='choose("about");'>About</a>
 <a class="panelLabel" onclick='choose("publications");'>Papers</a>
+<a class="panelLabel" onclick='choose("code");'>Code</a>
 <a class="panelLabel" onclick='choose("presentations");'>Slides</a>
 </div></div>
 
@@ -121,116 +126,181 @@ function onLoad() {
 <h1>Publications</h1>
 <ul>
 
-<li>E. de Souza da Silva, <u>T. Kuśmierczyk</u>, M. Hartmann, A. Klami: <i>Prior Specification for Bayesian Matrix Factorization via Prior Predictive Matching</i>. 
+<li>
+  E. de Souza da Silva, <u>T. Kuśmierczyk</u>, M. Hartmann, A. Klami: <i>Prior Specification for Bayesian Matrix Factorization via Prior Predictive Matching</i>. 
   <a href="https://jmlr.org/papers/v24/" target="_blank">JMLR 2023.</a>
   <a href="https://jmlr.org/papers/volume24/21-0623/21-0623.pdf" class="linkCode">ONLINE</a>
   <a href="https://arxiv.org/pdf/1910.12263.pdf" class="linkPdf">arXiv</a>
   <a href="https://github.com/tkusmierczyk/bayesian_hyperparameters_matching" class="linkCode">CODE</a> 
 </li>
 
-<li><u>T. Kuśmierczyk</u>, A. Klami: <i>Reliable Categorical Variational Inferencewith Mixture of Discrete Normalizing Flows</i>. 
-<a href="https://arxiv.org/pdf/2006.15568.pdf" class="linkPdf">arXiv</a>
-<a href="https://github.com/tkusmierczyk/mixture_of_discrete_normalizing_flows" class="linkCode">CODE</a> 
-<a href="https://www.slideshare.net/TomaszKusmierczyk/automatic-variational-inference-with-latent-categorical-variables" class="linkSlides">SLIDES</a>
+<li>
+  <u>T. Kuśmierczyk</u>, A. Klami: <i>Reliable Categorical Variational Inferencewith Mixture of Discrete Normalizing Flows</i>. 
+  <a href="https://arxiv.org/pdf/2006.15568.pdf" class="linkPdf">arXiv</a>
+  <a href="https://github.com/tkusmierczyk/mixture_of_discrete_normalizing_flows" class="linkCode">CODE</a> 
+  <a href="https://www.slideshare.net/TomaszKusmierczyk/automatic-variational-inference-with-latent-categorical-variables" class="linkSlides">SLIDES</a>
 </li>
 
 
-<li>O. Nyberg, <u>T. Kuśmierczyk</u>, A. Klami: <i>Uplift Modeling with High Class Imbalance</i>.
+<li>
+  O. Nyberg, <u>T. Kuśmierczyk</u>, A. Klami: <i>Uplift Modeling with High Class Imbalance</i>.
   <a href="http://www.acml-conf.org/2021/" target="_blank"> ACML 2021.</a>  
   <a href="https://recorder-v3.slideslive.com/#/share?share=48258&s=5a2827cb-23dc-4f11-9e6c-fc7f39b69b04" class="linkPoster">VIDEO</a>
-  </li>
-
-<li><u>T. Kuśmierczyk</u>, J. Sakaya, A. Klami: <i>Correcting Predictions for Approximate Bayesian Inference</i>.
-<a href="https://aaai.org/Conferences/AAAI-20/" target="_blank"> AAAI 2020.</a>  
-(<a href="http://portal.core.edu.au/conf-ranks/1629/" target="_blank">CORE rank: A*</a>) 
-<a href="https://arxiv.org/pdf/1909.04919.pdf" class="linkPdf">arXiv</a>
-<a href="https://github.com/tkusmierczyk/correcting_approximate_bayesian_predictions" class="linkCode">CODE</a> 
-<a href="pubs/2020_aaai_poster.pdf" class="linkPoster">POSTER</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, J. Sakaya, A. Klami: <i>Variational Bayesian Decision-making for Continuous Utilities</i>. 
-<a href="https://nips.cc/Conferences/2019" target="_blank"> NeurIPS 2019.</a> 
-(<a href="http://portal.core.edu.au/conf-ranks/98/" target="_blank">CORE rank: A*</a>) 
-<a href="https://github.com/tkusmierczyk/lcvi" class="linkCode">CODE</a> 
-<a href="https://arxiv.org/abs/1902.00792" class="linkPdf">arXiv</a>
-<a href="https://www.slideshare.net/TomaszKusmierczyk/loss-calibrated-variational-inference" class="linkSlides">SLIDES</a>
-<a href="pubs/2019_nips_poster.pdf" class="linkPoster">POSTER</a>
+<li>
+  <u>T. Kuśmierczyk</u>, J. Sakaya, A. Klami: <i>Correcting Predictions for Approximate Bayesian Inference</i>.
+  <a href="https://aaai.org/Conferences/AAAI-20/" target="_blank"> AAAI 2020.</a>  
+  (<a href="http://portal.core.edu.au/conf-ranks/1629/" target="_blank">CORE rank: A*</a>) 
+  <a href="https://arxiv.org/pdf/1909.04919.pdf" class="linkPdf">arXiv</a>
+  <a href="https://github.com/tkusmierczyk/correcting_approximate_bayesian_predictions" class="linkCode">CODE</a> 
+  <a href="pubs/2020_aaai_poster.pdf" class="linkPoster">POSTER</a>
 </li>
 
-
-<li>C. Trattner, <u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Investigating and Predicting Online Food Recipe Upload Behavior</i>. 
-<a href="https://www.journals.elsevier.com/information-processing-and-management" target="_blank"> Information Processing & Management.</a> (IF: 3.4) 
-<a href="pubs/2018_ipm.pdf" class="linkPdf">PDF</a>
+<li>
+  <u>T. Kuśmierczyk</u>, J. Sakaya, A. Klami: <i>Variational Bayesian Decision-making for Continuous Utilities</i>. 
+  <a href="https://nips.cc/Conferences/2019" target="_blank"> NeurIPS 2019.</a> 
+  (<a href="http://portal.core.edu.au/conf-ranks/98/" target="_blank">CORE rank: A*</a>) 
+  <a href="https://github.com/tkusmierczyk/lcvi" class="linkCode">CODE</a> 
+  <a href="https://arxiv.org/abs/1902.00792" class="linkPdf">arXiv</a>
+  <a href="https://www.slideshare.net/TomaszKusmierczyk/loss-calibrated-variational-inference" class="linkSlides">SLIDES</a>
+  <a href="pubs/2019_nips_poster.pdf" class="linkPoster">POSTER</a>
 </li>
 
 
-<li><u>T. Kuśmierczyk</u>, M. Gomez-Rodriguez: <i>On the Causal Effect of Badges</i>. 
-<a href="https://www2018.thewebconf.org/" target="_blank">WWW 2018.</a> 
-(<a href="http://portal.core.edu.au/conf-ranks/1548/" target="_blank">CORE rank: A*</a>) 
-<a href="https://github.com/tkusmierczyk/badges" class="linkCode">CODE</a> 
-<a href="https://arxiv.org/abs/1707.08160" class="linkPdf">arXiv</a>
-<a href="https://www.slideshare.net/TomaszKusmierczyk/on-the-causal-effect-of-digital-badges" class="linkSlides">SLIDES</a>
+<li>
+  C. Trattner, <u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Investigating and Predicting Online Food Recipe Upload Behavior</i>. 
+  <a href="https://www.journals.elsevier.com/information-processing-and-management" target="_blank"> Information Processing & Management.</a> (IF: 3.4) 
+  <a href="pubs/2018_ipm.pdf" class="linkPdf">PDF</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, K. Nørvåg: <i>On Validation and Predictability of
-Digital Badges' Influence on Individual Users</i>. 
-<a href="https://aaai.org/Conferences/AAAI-18/" target="_blank"> AAAI 2018.</a>  
-(<a href="http://portal.core.edu.au/conf-ranks/1629/" target="_blank">CORE rank: A*</a>) 
-<a href="https://github.com/tkusmierczyk/badges2" class="linkCode">CODE</a> 
-<a href="https://arxiv.org/abs/1710.01716" class="linkPdf">arXiv</a>
-<a href="pubs/2018_aaai_poster.pdf" class="linkPoster">POSTER</a>
+
+<li>
+  <u>T. Kuśmierczyk</u>, M. Gomez-Rodriguez: <i>On the Causal Effect of Badges</i>. 
+  <a href="https://www2018.thewebconf.org/" target="_blank">WWW 2018.</a> 
+  (<a href="http://portal.core.edu.au/conf-ranks/1548/" target="_blank">CORE rank: A*</a>) 
+  <a href="https://github.com/tkusmierczyk/badges" class="linkCode">CODE</a> 
+  <a href="https://arxiv.org/abs/1707.08160" class="linkPdf">arXiv</a>
+  <a href="https://www.slideshare.net/TomaszKusmierczyk/on-the-causal-effect-of-digital-badges" class="linkSlides">SLIDES</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Online Food Recipe Title Semantics: Combining Nutrient Facts and Topics</i>. 
-<a href="http://cikm2016.cs.iupui.edu/" target="_blank">CIKM 2016.</a> 
-(<a href="http://portal.core.edu.au/conf-ranks/25/" target="_blank">CORE rank: A</a>) 
-<a href="https://github.com/tkusmierczyk/multiple_regression_lda" class="linkCode">CODE</a> 
-<a href="pubs/2016_cikm.pdf" class="linkPdf">PDF</a>
-<a href="pubs/2016_cikm_poster.pdf" class="linkPoster">POSTER</a>
+<li>
+  <u>T. Kuśmierczyk</u>, K. Nørvåg: <i>On Validation and Predictability of Digital Badges' Influence on Individual Users</i>. 
+  <a href="https://aaai.org/Conferences/AAAI-18/" target="_blank"> AAAI 2018.</a>  
+  (<a href="http://portal.core.edu.au/conf-ranks/1629/" target="_blank">CORE rank: A*</a>) 
+  <a href="https://github.com/tkusmierczyk/badges2" class="linkCode">CODE</a> 
+  <a href="https://arxiv.org/abs/1710.01716" class="linkPdf">arXiv</a>
+  <a href="pubs/2018_aaai_poster.pdf" class="linkPoster">POSTER</a>
+</li>
+
+<li>
+  <u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Online Food Recipe Title Semantics: Combining Nutrient Facts and Topics</i>. 
+  <a href="http://cikm2016.cs.iupui.edu/" target="_blank">CIKM 2016.</a> 
+  (<a href="http://portal.core.edu.au/conf-ranks/25/" target="_blank">CORE rank: A</a>) 
+  <a href="https://github.com/tkusmierczyk/multiple_regression_lda" class="linkCode">CODE</a> 
+  <a href="pubs/2016_cikm.pdf" class="linkPdf">PDF</a>
+  <a href="pubs/2016_cikm_poster.pdf" class="linkPoster">POSTER</a>
 </li> 
 
-<li><u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Understanding and Predicting Online Food Recipe Production Patterns</i>. 
-Hypertext 2016. 
-(<a href="http://portal.core.edu.au/conf-ranks/17/" target="_blank">CORE rank: A</a>) 
-<a href="pubs/2016_ht.pdf" class="linkPdf">PDF</a>
-<a href="pubs/2016_ht_slides.pdf" class="linkSlides">SLIDES</a>
+<li>
+  <u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Understanding and Predicting Online Food Recipe Production Patterns</i>. Hypertext 2016. 
+  (<a href="http://portal.core.edu.au/conf-ranks/17/" target="_blank">CORE rank: A</a>) 
+  <a href="pubs/2016_ht.pdf" class="linkPdf">PDF</a>
+  <a href="pubs/2016_ht_slides.pdf" class="linkSlides">SLIDES</a>
 </li>
 
-<li>G. Bokota, M. Magnowska, <u>T. Kuśmierczyk</u>, M. Lukasik, et al.: <i>Computational approach to dendritic spine
-taxonomy and shape transition analysis. Frontiers in Computational Neuroscience</i>, 2016. (IF:2.3) 
-<a href="http://journal.frontiersin.org/article/10.3389/fncom.2016.00140/full" class="linkPdf">ONLINE</a>
-<a href="https://github.com/tkusmierczyk/dendritic-spines-modelling" class="linkCode">CODE</a>
+<li>
+  G. Bokota, M. Magnowska, <u>T. Kuśmierczyk</u>, M. Lukasik, et al.: <i>Computational approach to dendritic spine
+  taxonomy and shape transition analysis. Frontiers in Computational Neuroscience</i>, 2016. (IF:2.3) 
+  <a href="http://journal.frontiersin.org/article/10.3389/fncom.2016.00140/full" class="linkPdf">ONLINE</a>
+  <a href="https://github.com/tkusmierczyk/dendritic-spines-modelling" class="linkCode">CODE</a>
 </li>
 
-<li>M. Rokicki, E. Herder, <u>T. Kuśmierczyk</u>, C. Trattner: <i>Plate and Prejudice: Gender Differences in Online Cooking</i>. 
-UMAP 2016. (CORE rank: B) 
-<a href="pubs/2016_umap.pdf" class="linkPdf">PDF</a>
+<li>
+  M. Rokicki, E. Herder, <u>T. Kuśmierczyk</u>, C. Trattner: <i>Plate and Prejudice: Gender Differences in Online Cooking</i>. UMAP 2016. (CORE rank: B) 
+  <a href="pubs/2016_umap.pdf" class="linkPdf">PDF</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Mining Correlations on Massive Bursty Time Series Collections</i>. DASFAA 2015. (CORE rank: B)
-<a href="https://github.com/tkusmierczyk/dasfaa_correlated_bursts" class="linkCode">CODE</a> 
-<a href="pubs/2015_dasfaa.pdf" class="linkPdf">PDF</a>
-<a href="https://www.slideshare.net/TomaszKusmierczyk/tomasz-kusmierczyk-dasfaa2015burstystreams" class="linkSlides">SLIDES</a>
+<li>
+  <u>T. Kuśmierczyk</u>, K. Nørvåg: <i>Mining Correlations on Massive Bursty Time Series Collections</i>. DASFAA 2015. (CORE rank: B)
+  <a href="https://github.com/tkusmierczyk/dasfaa_correlated_bursts" class="linkCode">CODE</a> 
+  <a href="pubs/2015_dasfaa.pdf" class="linkPdf">PDF</a>
+  <a href="https://www.slideshare.net/TomaszKusmierczyk/tomasz-kusmierczyk-dasfaa2015burstystreams" class="linkSlides">SLIDES</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Temporality in Online Food Recipe Consumption and Production</i>. WWW 2015. (CORE rank: A*) 
-<a href="pubs/2015_www.pdf" class="linkPdf">PDF</a>
-<a href="pubs/2015_www_poster.pdf" class="linkPoster">POSTER</a>
+<li>
+  <u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Temporality in Online Food Recipe Consumption and Production</i>. WWW 2015. (CORE rank: A*) 
+  <a href="pubs/2015_www.pdf" class="linkPdf">PDF</a>
+  <a href="pubs/2015_www_poster.pdf" class="linkPoster">POSTER</a>
 </li>
 
-<li><u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Temporal Patterns in Online Food Innovation</i>. TempWeb 2015 (WWW Proceedings). 
-<a href="pubs/2015_tempweb.pdf" class="linkPdf">PDF</a>
-<a href="https://www.slideshare.net/TomaszKusmierczyk/temporal-patterns-in-online-food-innovation-tempweb2015-www2015-companion" class="linkSlides">SLIDES</a>
+<li>
+  <u>T. Kuśmierczyk</u>, C. Trattner, K. Nørvåg: <i>Temporal Patterns in Online Food Innovation</i>. TempWeb 2015 (WWW Proceedings). 
+  <a href="pubs/2015_tempweb.pdf" class="linkPdf">PDF</a>
+  <a href="https://www.slideshare.net/TomaszKusmierczyk/temporal-patterns-in-online-food-innovation-tempweb2015-www2015-companion" class="linkSlides">SLIDES</a>
 </li>
 
 <!--<li><a href="pubs/2015_ismb.pdf"><u>T. Kuśmierczyk</u>, M. Lukasik, M. Magnowska, M Roszkowska, D. Plewczynski: Computational approach to dendritic spine taxonomy and shape transition analysis. (under review).</a></li>-->
 <!--<li><u>T. Kuśmierczyk</u>, M. Lukasik, M. Magnowska, M Roszkowska, D. Plewczynski: Computational approach to dendritic spine taxonomy and shape transition analysis. (submitted).</li>-->
-<li><a href="pubs/2013_fedcsis.pdf" class="old">W. Kosinski, M. Sydow, <u>T. Kuśmierczyk</u>, P. Rembelski: <i>Application of Ant-Colony Optimisation to Compute Diversified Entity Summarisation on Semantic Knowledge Graphs</i>. FedCSIS 2013: 69-76.</a></li>
-<li><a href="pubs/2013_lpiis.pdf" class="old"><u>T. Kuśmierczyk</u>, M. Sydow: <i>Towards a Keyword-Focused Web Crawler</i>. IIS 2013: 187-197.</a></li>
-<li><a href="pubs/2012_synat.pdf" class="old"><u>T. Kuśmierczyk</u>, M. Lukasik, L. Bolikowski, H. Son Nguyen: <i>Comparing Hierarchical Mathematical Document Clustering against the Mathematics Subject Classification Tree</i>. Intelligent Tools for Building a Scientific Information Platform 2013: 365-392.</a></li>
-<li><a href="pubs/2012_synat2.pdf" class="old">M. Lukasik, <u>T. Kuśmierczyk</u>, L. Bolikowski, H. Son Nguyen: Hierarchical, <i>Multi-label Classification of Scholarly Publications: Modifications of ML-KNN Algorithm</i>. Intelligent Tools for Building a Scientific Information Platform 2013: 343-363.</a></li>
+<li>
+  <a href="pubs/2013_fedcsis.pdf" class="old">W. Kosinski, M. Sydow, <u>T. Kuśmierczyk</u>, P. Rembelski: <i>Application of Ant-Colony Optimisation to Compute Diversified Entity Summarisation on Semantic Knowledge Graphs</i>. FedCSIS 2013: 69-76.</a>
+</li>
+
+<li>
+  <a href="pubs/2013_lpiis.pdf" class="old"><u>T. Kuśmierczyk</u>, M. Sydow: <i>Towards a Keyword-Focused Web Crawler</i>. IIS 2013: 187-197.</a>
+</li>
+
+<li>
+  <a href="pubs/2012_synat.pdf" class="old"><u>T. Kuśmierczyk</u>, M. Lukasik, L. Bolikowski, H. Son Nguyen: <i>Comparing Hierarchical Mathematical Document Clustering against the Mathematics Subject Classification Tree</i>. Intelligent Tools for Building a Scientific Information Platform 2013: 365-392.</a>
+</li>
+
+<li>
+  <a href="pubs/2012_synat2.pdf" class="old">M. Lukasik, <u>T. Kuśmierczyk</u>, L. Bolikowski, H. Son Nguyen: Hierarchical, <i>Multi-label Classification of Scholarly Publications: Modifications of ML-KNN Algorithm</i>. Intelligent Tools for Building a Scientific Information Platform 2013: 343-363.</a>
+</li>
 
 </ul>
+
+</article>
+
+
+<article  id="code" style="display:none" >
+
+<h1>Code contributions</h1>
+
+<div class="repo-list">
+  <a href="https://github.com/tkusmierczyk?tab=repositories" class="repo-block">
+    My GitHub repository
+  </a>
+  <a href="https://github.com/orgs/KusmierczykHobbyPrjs/repositories" class="repo-block">
+    Free time projects
+  </a>
+</div>
+
+<!-- <h2>Calendar</h2> -->
+<br /><br />
+
+<div class="calendar">
+    Loading the data...
+</div>
+<script>
+    GitHubCalendar(".calendar", "tkusmierczyk");
+</script>
+
+<br /><br />
+
+<div class="stats-container">
+  <div class="stat-item">
+    <img src="https://github-readme-stats.vercel.app/api?username=tkusmierczyk" alt="My GitHub Stats">
+  </div>
+  <div class="stat-item">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tkusmierczyk&layout=compact"
+      alt="Top Languages">
+  </div>
+  <!-- <div class="stat-item">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=tkusmierczyk" alt="GitHub Streak" />
+  </div> -->
+</div>
+
 
 </article>
 
