@@ -203,6 +203,21 @@ h3 {
     color: white;
 }
 
+.linkArxiv {
+    border: 2px solid #EC7063;
+    border-radius: 5px;
+    display: inline-block;
+    color: #EC7063;
+    font-size: 75%;
+    padding: 2px;
+}
+
+.linkArxiv:hover {
+    text-decoration: none;
+    background-color: #EC7063;
+    color: white;
+}
+
 .linkSlides {
     border: 2px solid #EC7063;
     border-radius: 5px;
@@ -294,3 +309,4 @@ h3 {
     background-position: center;
     background-size: contain; 
 }
+
