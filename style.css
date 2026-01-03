@@ -63,6 +63,9 @@ article {
     background-color: #2f2f2f;
 }
 
+.panelLabel::first-letter {
+  color: white;
+}
 
 a {
   text-decoration: none ;
@@ -77,10 +80,17 @@ img {
 	vertical-align: middle;
 }
 
+
+
 ul li{
     list-style-type: circle;
     padding: 5px;
     margin: 5px;
+}
+
+#publications ul {
+  padding: 0;            /* Removes the default indentation */
+  margin: 0;             /* Removes default vertical/horizontal spacing */
 }
 
 #publications li {
