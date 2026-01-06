@@ -11,6 +11,11 @@ body {
     color: #0a0a0a;
 }
 
+/* Prevent layout shift when switching panels by keeping scrollbar visible */
+html {
+    overflow-y: scroll;
+}
+
 
 article {
     margin: auto;
