@@ -18,7 +18,14 @@
 const IDS = ["about", "publications", "code", "presentations"]
 
 // Function to choose a page
-function choose(id) {
+function choose(id, el) {
+  // Toggle active class on navbar labels
+  var labels = document.getElementsByClassName("panelLabel");
+  for (var j = 0; j < labels.length; j++) {
+    labels[j].classList.remove('active');
+  }
+  if (el) el.classList.add('active');
+
   for (var i = 0; i < IDS.length; i++) {
       document.getElementById(IDS[i]).style.opacity = '0';  // Set opacity to 0 for fade-out
       setTimeout(function(i) {
@@ -63,12 +70,14 @@ function onLoad() {
 
 <body onload="onLoad()" onresize="onResize()">
 
-<div class="panel1"><div class="panel" id="navbar">
-<a class="panelLabel" onclick='choose("about");'>About</a>
-<a class="panelLabel" onclick='choose("publications");'>Papers</a>
-<a class="panelLabel" onclick='choose("code");'>Code</a>
-<a class="panelLabel" onclick='choose("presentations");'>Slides</a>
-</div></div>
+<div class="panel1">
+  <div class="panel" id="navbar">
+    <a class="panelLabel active" onclick='choose("about", this);'>About</a>
+    <a class="panelLabel" onclick='choose("publications", this);'>Papers</a>
+    <a class="panelLabel" onclick='choose("code", this);'>Code</a>
+    <a class="panelLabel" onclick='choose("presentations", this);'>Slides</a>
+  </div>
+</div>
 
 
 <article id="about">
@@ -330,7 +339,7 @@ function onLoad() {
 
 <br /><br />
 
-<div class="stats-container">
+<!-- <div class="stats-container">
   <div class="stat-item">
     <img src="https://github-readme-stats.vercel.app/api?username=tkusmierczyk" alt="My GitHub Stats">
   </div>
@@ -338,10 +347,10 @@ function onLoad() {
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tkusmierczyk&layout=compact"
       alt="Top Languages">
   </div>
-  <!-- <div class="stat-item">
+  <div class="stat-item">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=tkusmierczyk" alt="GitHub Streak" />
-  </div> -->
-</div>
+  </div> 
+</div> -->
 
 
 </article>
