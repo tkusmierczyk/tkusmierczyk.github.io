@@ -114,6 +114,65 @@ ul li{
     margin: 10px 0;
 }
 
+/* Papers are grouped by research line rather than listed by date. */
+#publications h2.pubGroup {
+    text-align: left;
+    font-size: medium;
+    margin: 26px 0 2px 0;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.2);
+}
+
+#publications h2.pubGroup:first-of-type {
+    margin-top: 8px;
+}
+
+#publications .pubNote {
+    max-width: 960px;
+    margin: 0 auto 4px auto;
+    text-align: center;
+    font-size: small;
+    opacity: 0.75;
+}
+
+/* Clears the floated Contact box so following sections start below it. */
+.clearer {
+    clear: both;
+}
+
+/* Label/content pairs in the Research activity section. */
+dl.activity {
+    max-width: 760px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 145px 1fr;
+    column-gap: 20px;
+    row-gap: 11px;
+}
+
+dl.activity dt {
+    font-weight: bold;
+    text-align: right;
+    opacity: 0.8;
+}
+
+dl.activity dd {
+    margin: 0;
+    text-align: justify;
+}
+
+@media (max-width: 640px) {
+    dl.activity {
+        grid-template-columns: 1fr;
+        row-gap: 3px;
+    }
+
+    dl.activity dt {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
 h1 {
     display: block;
     width: 100%;
