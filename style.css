@@ -36,6 +36,7 @@ article {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     background-color: rgba(11, 10, 10, 0.95);
+    z-index: 1000;  /* Keep the menu above filtered/faded content (photo, icons) */
 }
 
 #navbar {
